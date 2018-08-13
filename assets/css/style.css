@@ -1,0 +1,253 @@
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    line-height: 2;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: #4aaaa5;
+}
+
+body {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    color: #777777;
+    background-image: url("../images/background.png");
+    background-color:#cccccc;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+p {
+    line-height: 2;
+}
+
+header {
+    float: left;
+    margin: 0 0 10% 0;
+    background: #ffffff;
+    border: solid #cccccc;
+    border-width: 0px 0px 2px 0px;
+    width: 100%;
+}
+
+hr { 
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #dddddd;
+}
+
+.innerheader {
+    padding: 0 0 1% 0;
+    width:80%;
+    margin: 0 auto;
+}
+
+.name {
+    background: #4aaaa5;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    float: left;
+}
+
+.menucontainer {
+    padding-top: 28px;
+}
+
+.menu {
+    list-style-type: none;
+    float: right;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #777777;
+    padding: 5px;
+    transition: background-color .5s;
+}
+
+.menu a:hover {
+    background: #4aaaa5;
+}
+
+.maincontainer {
+    flex: 1 0 auto;
+}
+
+.main {
+    width:70%;
+    background: #ffffff;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    clear: both;
+    padding: 5%;
+    border: 2px solid #dddddd;
+    overflow: auto;
+    float: none;
+
+}
+
+#profilepic {
+    height: 200px;
+    margin: 8px 20px 0px 0px;
+    float: left;
+    vertical-align:text-top;
+}
+
+footer {
+    float: left;
+    background-color: #666666;
+    border: solid #4aaaa5;
+    border-width: 10px 0px 0px 0px;
+    margin: auto 0px 0px 0px;
+    text-align: center;
+    width: 100%
+}
+
+.left2col {
+    width: 33.33333%;
+    float: left;
+    overflow: auto;
+}
+
+.porfolioimgcontain {
+    float: left;
+    position: relative;
+    width: 50%;
+    margin: 1%, 1%, 5%, 1%;
+    display: block;
+}
+
+.portfolioimgcontain:hover .portfoliotext {
+    opacity: 0;
+}
+
+.portfolioimgcontain:hover .portfolioimg {
+    filter: none;
+}
+
+.portfolioimg {
+    width: 275px;
+    position: relative;
+    z-index: 0;
+    filter: grayscale();
+    transition: filter .5s;
+}
+
+.portfoliotext {
+    background: #4aaaa5;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    color: white;
+    position: relative;
+    z-index: 1;
+    padding-top: 10px;
+    height: 40px;
+    width: 275px;
+    bottom: 60px;
+    text-align: center;
+    transition: opacity .5s;
+}
+
+#contactform input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+#contactform textarea {
+    width: 100%;
+    padding: 5px;
+    border-color: lightgray;
+    font-size: 12px;
+}
+
+button {
+    background: #4aaaa5;
+    color: white;
+    line-height: 2;
+    padding: 0px 15px;
+    margin-top: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 980px) {
+    .main {
+        width: 40%;
+        float: left;
+        margin: 0% 0% 10% 10%;
+    }
+    
+    #profilepic {
+        max-width: 33.3333333%;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        width:70%;
+        background: #ffffff;
+        margin: 0 auto;
+        margin-bottom: 35px;
+        clear: both;
+        padding: 5%;
+        border: 2px solid #dddddd;
+        overflow: auto;
+        float: none;
+    }
+
+    #profilepic {
+        max-width: 50%;
+    }
+    
+}
+
+@media screen and (max-width: 640px) {
+    header {
+        position: static;
+    }
+    .innerheader {
+        width: 100%;
+    }
+    .name {
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .main {
+        width: 80%;
+    }
+
+    .menucontainer, .menu {
+        width: 100%;
+        float:left;
+        text-align: center;
+    }
+
+    .menucontainer {
+        padding: 5% 0%;
+    }
+
+    #profilepic {
+        max-width: 100%;
+        height: auto;
+    }    
+
+}
